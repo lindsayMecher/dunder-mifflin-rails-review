@@ -1,0 +1,30 @@
+<h1>Employee Show</h1>
+
+<% if flash[:success] %>
+    <p style="color: green"><%= flash[:success] %></p>
+<% end %>
+
+<div>
+    <h2>
+        My name is <%= @employee.full_name %>.
+    </h2>
+
+    <h2>
+        AKA: <%= @employee.alias %>.
+    </h2>
+
+    <h2>
+        My title is <%= @employee.title %>.
+    </h2>
+
+    <h2>
+        I work at the <%= @employee.office %> Office.
+    </h2>
+
+    <%= image_tag @employee.img_url, alt: "Employee Picture" %>
+
+    <h2>
+        My dog is <%= @employee.dog.name %>.
+    </h2>
+</div>
+
